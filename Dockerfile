@@ -6,9 +6,12 @@ WORKDIR /app
 
 # --- This is the magic part ---
 # Install the system-level programs our app needs
+# --- This is the magic part ---
+# Install the system-level programs our app needs
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     libgl1 \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy our requirements file into the container
@@ -30,3 +33,4 @@ EXPOSE 10000
 # The command to run our app using the Gunicorn server
 
 CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]
+
