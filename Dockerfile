@@ -1,5 +1,5 @@
 # Start from a standard Python 3.11 image
-FROM python:3.11-slim
+FROM python:3.11
 
 # Set a working directory inside the container
 WORKDIR /app
@@ -31,5 +31,6 @@ EXPOSE 10000
 # The command to run our app using the Gunicorn server
 
 CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]
+
 
 
