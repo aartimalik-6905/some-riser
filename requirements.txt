@@ -19,7 +19,8 @@ nltk
 pandas
 pytesseract
 pillow
-fitz
+PyMuPDF
 python-docx
 img2table
 opencv-python-headless
+
