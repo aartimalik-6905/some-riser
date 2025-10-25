@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some-Riser - Summarise Like a Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash-screen">
+        <h1>Let's Some-Rise ✨</h1>
+    </div>
+
+    <div class="app-container">
+        
+        <nav>
+            <div class="logo">
+                <img src="summarizerimg.png" alt="Some-Riser Logo">
+                <span>Some-Riser</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features-section">Features</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#" id="contact-btn">Contact</a></li>
+            </ul>
+            <div id="dark-mode-toggle">🌙</div>
+        </nav>
+
+        <main>
+            <div class="hero">
+                <h1>Smart Summaries. Smarter Insights.</h1>
+                <p>AI-powered document analysis that transforms complex documents into clear, actionable insights.</p>
+            </div>
+
+            <div class="upload-section">
+                <h2>Upload Your Document</h2>
+<input type="file" id="file-input" hidden accept=".txt,.csv,.png,.jpg,.jpeg,.pdf,.docx">                
+                <div class="upload-box glass-effect">
+                    <p>Drop your file here or browse from your computer</p>
+                    <p class="file-types">Accepts .txt, .csv, images, .pdf, and .docx files</p>                    <button class="browse-btn" id="browse-btn">Browse Files</button>
+                    <p id="file-name-display"></p> </div>
+                
+                <p class="or-text">Or paste your document text below</p>
+                
+                <textarea class="text-input glass-effect" id="text-input" placeholder="Paste your document text here for instant analysis..."></textarea>
+                
+                <button class="analyze-btn" id="analyze-text-btn">
+                    ✨ Analyze Pasted Text
+                </button>
+            </div>
+
+            <div class="results-preview">
+                <h2 id="results-title">Preview Results</h2>
+                <p class="demo-text" id="results-demo-text">Upload a file or paste text to see results here.</p>
+                
+                <div class="results-grid">
+                    <div class="result-box glass-effect" id="summary-box">
+                        <h3>📄 Smart Summary</h3>
+                        <p class="subheading" id="summary-subheading">AI-generated document overview</p>                        <p id="summary-overview">...</p>
+                        <h4>Key Insights</h4>
+                        <ul id="summary-insights">
+                            <li>Your key insights will appear here.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-box glass-effect" id="keywords-box">
+                        <h3>🔑 Top Keywords</h3>
+                        <p class="subheading">Important terms and phrases</p>
+                        <div class="keywords" id="keywords-list">
+                            </div>
+                    </div>
+
+                    <div class="result-box glass-effect" id="table-box">
+                        <h3>📊 Table Insights</h3>
+                        <p class="subheading">Smart table analysis</p>
+                        <table class="preview-table">
+                            <thead>
+                                <tr id="table-header-row">
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="table-sample-row">
+                                    </tr>
+                            </tbody>
+                        </table>
+                        <h4>Key Insights</h4>
+                        <ul id="table-insights">
+                           <li>Your table insights will appear here.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <section id="features-section" class="info-section">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-box glass-effect">Smart Summariser</div>
+                    <div class="feature-box glass-effect">Analyze Docs (.txt,images, .pdf, and .docx)</div>
+                    <div class="feature-box glass-effect">Analyze Tables (.csv)</div>
+                    
+                </div>
+            </section>
+            
+            <section id="about-section" class="info-section">
+                <h2>About</h2>
+                <p>Created by Aarti, this smart summariser helps you understand complex documents in seconds. 💖</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Some-Riser | Powered by AI | made by Aarti</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

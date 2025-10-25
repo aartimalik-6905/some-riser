@@ -1,0 +1,286 @@
+/* Import a nice font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- CSS Variables (Your Theme) --- */
+:root {
+    --bg-color: #FFF0F5; /* Light lavender blush pink */
+    --primary-color: #FF69B4; /* Hot pink */
+    --secondary-color: #FFC0CB; /* Regular pink */
+    --text-color: #333;
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Dark Mode Theme --- */
+body.dark-mode {
+    --bg-color: #2B0014; /* Dark purple/pink */
+    --primary-color: #FF85C0; /* Lighter hot pink */
+    --secondary-color: #7A003D;
+    --text-color: #F0F0F0;
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- General Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Splash Screen --- */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+}
+#splash-screen h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+#splash-screen.hidden {
+    opacity: 0;
+    pointer-events: none; /* Allows clicking through it */
+}
+
+/* --- Glassmorphism Effect --- */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* --- Navigation Bar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    margin-top: 20px;
+    
+    /* These 3 lines make it "stick" to the top */
+    position: sticky;
+    top: 20px; /* Adds 20px of space above it */
+    z-index: 100; /* Keeps it on top of other content */
+    
+    /* Make the nav bar itself have the glass effect */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+.logo { display: flex; align-items: center; }
+.logo img { height: 40px; margin-right: 10px; }
+.logo span { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 15px; }
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+nav ul li a:hover { color: var(--primary-color); }
+#dark-mode-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+#dark-mode-toggle:hover { transform: scale(1.2); }
+
+/* --- Main Content --- */
+main { padding: 40px 0; }
+.hero { text-align: center; margin-bottom: 40px; }
+.hero h1 { font-size: 2.5rem; color: var(--primary-color); }
+.hero p { font-size: 1.1rem; max-width: 600px; margin: 10px auto 0; }
+
+/* --- Upload Section --- */
+.upload-section {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    box-shadow: var(--shadow);
+}
+.upload-section h2 { margin-bottom: 20px; }
+.upload-box {
+    padding: 40px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: var(--glass-border);
+    background: var(--glass-bg);
+    color: white;
+}
+.file-types { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+.browse-btn {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.browse-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.or-text { margin: 20px 0; font-weight: 600; }
+.text-input {
+    width: 100%;
+    height: 150px;
+    border: 1px solid var(--glass-border);
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+    resize: vertical;
+}
+.analyze-btn {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+}
+.analyze-btn:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+.coming-soon { font-weight: 400; opacity: 0.8; font-size: 0.9rem; }
+
+/* --- Results Section --- */
+.results-preview { margin-top: 60px; }
+.results-preview h2 { text-align: center; margin-bottom: 10px; }
+.demo-text { text-align: center; margin-bottom: 30px; opacity: 0.7; }
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.result-box {
+    padding: 25px;
+    height: 100%; /* Makes boxes same height */
+}
+.result-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+.result-box .subheading {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 10px;
+}
+.result-box h4 { margin: 15px 0 10px 0; }
+.result-box ul { padding-left: 20px; margin-bottom: 10px; }
+.result-box li { margin-bottom: 5px; }
+
+/* Keywords */
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; }
+.keyword {
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+/* Table */
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+.preview-table th, .preview-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+.preview-table th { color: var(--primary-color); }
+
+/* --- Info Sections (Features, About) --- */
+.info-section {
+    margin-top: 60px;
+    padding: 40px;
+    text-align: center;
+}
+.info-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.feature-box {
+    padding: 30px 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    
+    /* This line makes the "pop" smooth */
+    transition: transform 0.2s ease-out;
+}
+
+/* This is the new part that makes it "pop" */
+.feature-box:hover {
+    transform: translateY(-5px); /* Moves it up 5px */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Adds a nice shadow */
+}
+#about-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--glass-border);
+    opacity: 0.7;
+}

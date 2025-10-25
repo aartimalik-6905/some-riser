@@ -1,0 +1,22 @@
+# Flask and Server
+flask
+flask-cors
+gunicorn
+
+# AI Brain
+google-generativeai
+
+# Summarizer
+spacy
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
+sumy
+nltk
+
+# File Readers
+pandas
+pytesseract
+pillow
+fitz # PyMuPDF
+python-docx
+img2table
+opencv-python-headless
