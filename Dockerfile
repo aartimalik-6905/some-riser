@@ -18,10 +18,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 # Install all our Python libraries
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Download the NLTK data (punkt and punkt_tab)
-RUN python -m nltk.downloader punkt punkt_tab
+RUN pip install -r requirements.txt && \
+    python -m nltk.downloader punkt punkt_tab
 
 # Copy the rest of our app code into the container
 COPY . .
@@ -33,4 +31,5 @@ EXPOSE 10000
 # The command to run our app using the Gunicorn server
 
 CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]
+
 
