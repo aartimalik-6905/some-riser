@@ -6,12 +6,11 @@ gunicorn
 # AI Brain
 google-generativeai
 
-# --- THIS IS THE FIX ---
-# We are pinning spacy and numpy to versions
-# that are known to work together.
+# --- Spacy/Numpy Version Fix ---
 numpy==1.26.4
 spacy==3.7.4
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz# --- END FIX ---
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
+# --- End Fix ---
 
 sumy
 nltk
@@ -20,8 +19,7 @@ nltk
 pandas
 pytesseract
 pillow
-fitz # PyMuPDF
+fitz
 python-docx
 img2table
 opencv-python-headless
-
