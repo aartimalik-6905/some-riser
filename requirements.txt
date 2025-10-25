@@ -11,8 +11,7 @@ google-generativeai
 # that are known to work together.
 numpy==1.26.4
 spacy==3.7.4
-en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.4/en_core_web_sm-3.7.4.tar.gz
-# --- END FIX ---
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz# --- END FIX ---
 
 sumy
 nltk
@@ -25,3 +24,4 @@ fitz # PyMuPDF
 python-docx
 img2table
 opencv-python-headless
+
