@@ -6,11 +6,14 @@ gunicorn
 # AI Brain
 google-generativeai
 
-# --- Spacy/Numpy Version Fix ---
+# --- Spacy/Numpy/Blis Version Fix ---
+# Install numpy and blis *before* spacy
+# Use pre-built wheels if possible
 numpy==1.26.4
+blis==0.7.11 
 spacy==3.7.4
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
-
+# --- End Fix ---
 
 sumy
 nltk
@@ -23,4 +26,3 @@ PyMuPDF
 python-docx
 img2table
 opencv-python-headless
-
