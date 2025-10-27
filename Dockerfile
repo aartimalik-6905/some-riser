@@ -30,7 +30,8 @@ EXPOSE 10000
 
 # The command to run our app using the Gunicorn server
 
-CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]
+# Command to run the app on the HF default port with increased timeout
+CMD ["gunicorn", "--bind", "0.0.0.0:7860", "--timeout", "120", "app:app"]
 
 
 
