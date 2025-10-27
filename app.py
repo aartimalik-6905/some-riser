@@ -78,7 +78,7 @@ def summarize_document(text_content):
         }
         
     # FIX 4: Use a valid, existing model
-    model = genai.GenerativeModel('gemini-2.5-pro')
+    model = genai.GenerativeModel('gemini-pro')
     
     prompt = f"""
     Analyze the following text and provide two things in a clean JSON format:
@@ -315,4 +315,5 @@ def handle_mixed_doc():
 # --- 8. RUN THE SERVER ---
 if __name__ == '__main__':
     print("Starting Flask server... Go to your index.html in the browser.")
+
     app.run(debug=True, port=5000)
