@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const summarySubheading = document.getElementById('summary-subheading'); // For image count
 
     // The URL of our Python server
-    const API_URL = 'https://malikaarti-smart-summariser-backend.hf.space';
+    const API_URL = 'https://malikaarti-some-riser.hf.space';
 
     // --- 3. Wire Up the Buttons ---
 
@@ -337,3 +337,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 });
+
