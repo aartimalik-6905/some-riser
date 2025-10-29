@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const summarySubheading = document.getElementById('summary-subheading'); // For image count
 
     // The URL of our Python server
-    const API_URL = 'https://some-riser-render.onrender.com';
+    const API_URL = ' https://some-riser-render.onrender.com';
 
     // --- 3. Wire Up the Buttons ---
 
@@ -337,5 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 });
+
 
 
