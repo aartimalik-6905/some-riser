@@ -4,7 +4,7 @@ flask-cors
 gunicorn
 
 # AI Brain
-google-generativeai
+google-generativeai==0.7.1
 
 # --- Spacy/Numpy/Blis/Thinc Version Fix (Older Stable) ---
 numpy==1.24.4
@@ -25,3 +25,4 @@ PyMuPDF
 python-docx
 img2table
 opencv-python-headless
+
