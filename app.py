@@ -70,7 +70,7 @@ def summarize_document_gemini(text_content):
         return {"summary": "No text provided.", "keywords": [], "image_count": 0}
 
     # Use 'gemini-pro' as requested, though 'flash' is faster/cheaper
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     prompt = f"""
     Analyze the following text and provide two things in a clean JSON format:
     1. "summary": A concise, abstractive summary (2-4 sentences).
@@ -341,3 +341,4 @@ if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     # Use debug=False for production readiness, listen on all interfaces
     app.run(debug=False, host='0.0.0.0', port=port)
+
