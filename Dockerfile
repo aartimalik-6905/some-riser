@@ -27,11 +27,7 @@ COPY . .
 # Tell the world that our app runs on this port
 # Render will automatically use this port
 EXPOSE 10000
-
-# The command to run our app using the Gunicorn server
-
-# Command to run the app on the HF default port with increased timeout
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "--timeout", "120", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:10000", "--timeout", "120", "app:app"]
 
 
 
