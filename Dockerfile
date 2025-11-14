@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy our requirements file into the container
 COPY requirements.txt .
-
+RUN pip install --upgrade pip setuptools wheel
 # Install all our Python libraries
 RUN pip install -r requirements.txt && \
     python -m nltk.downloader punkt punkt_tab
@@ -28,6 +28,7 @@ COPY . .
 # Render will automatically use this port
 EXPOSE 10000
 CMD ["gunicorn", "--bind", "0.0.0.0:10000", "--timeout", "120", "app:app"]
+
 
 
 
